@@ -283,29 +283,55 @@ course = ('Python for Beginners')
 another = course[:] # This expression will all the xters in the course variable. The second variable "another" will be a copy of first variable "course"
 print(another) 
 
+# Output: Python for Biginners.
+
 # ******************
 # Proof of Concept 
 # ******************
 
 # Define a variable called "name" and set it to "Wisdom"
 name = 'Century'
-print(name[1:-1])
+print(name[1:-1]) # What do you think will be the output? 
 
 # Output: entur
 
+# ==================================================
+#  Formatted Strings in Python Programming Language
+# ==================================================
 
+# Description: Formatted string are useful in situations where you want to dynamically generate some texts with your variables. 
+# Let's set two variables for first_name and lsat_name name. We want to obtain an output which is like "Wisdom Faith is a coder" What do we do?
+first_name = 'Wisdom'
+last_name = 'Faith'
+message = first_name + ' ['+ last_name + '] is a coder'
+print(message)
 
-# Output: Python for Biginners.
-# ===================================
-# 
-# ===================================
-# Description:
+# Output: Wisdom [Faith] is a coder
+
+# While the approach above perfectly works, it's not ideal because as our text gets more complicated, it becomes harder to visualize the output.
+# So, someone reading the code < first_name + ' ['+ last_name + '] is a coder' >, they have to visualize all these strings concatinations in the head. 
+# ... This is where we use formatted strings. There make it easier for us to visualize the output. Example 
+
+first_name = 'Wisdom'
+last_name = 'Faith'
+message = first_name + ' ['+ last_name + '] is a coder'
+msg = f'{first_name} [{last_name}]  is a coder' # Let's define another variable and set it to a formatted string. formatted string is one which is prefixed with an "f"
+print(msg)
+
+# Output: Wisdom [Faith] is a coder
+
+# To define formatted string, prefix your string with an 'f' and use curly braces to dynamically insert values into your strings.
 
 # ===================================
-# 
+#             String Method
 # ===================================
-# Description:
 
+# Description: There are some cool things we can do with Python strings. To calculate the number of xters in a str, we can use a build-in function called "length (len)". 
+
+course = 'Python for Beginners.'
+print(len(course)) # the len function prints the number of xter in the variable "course"
+
+# Output: Python for Beginners.
 # ===================================
 # 
 # ===================================
