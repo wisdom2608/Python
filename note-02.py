@@ -80,8 +80,9 @@ print(is_in_school)
 # Description: We can also define a variable and set it to a string. For instance name ="Wisdom"
 # A boolean can be <True>, or <False> but not like "Yes" and "No" in English Language. We use underscore(_) to separate
 #..multiple words in a variable's name. For instance "is_published". The False and True are called boolean values.
-# NB: Python is case-sensitive language which is sensitive to lowercase and uppercase letters. So, also use lowercase letters when defining variables.
-# But the boolean True, and False are special key words in python language. So pyth will not understand it when spell "true" istead of "True", or "false" instead of "False"
+
+# NB: Python is case-sensitive language which is sensitive to lowercase and uppercase letters. So, we use lowercase letters when defining variables.
+# But the boolean True, and False are special key words in python language. So, Python will not understand it when spell "true" istead of "True", or "false" instead of "False"
 # Summary: This exercise we are storing simple values in a computer's memory. Simple values can be numers (such as integers, floats), string, and booleans.
 
 # In python we can also store complex values like <lists>, and <objects>.
@@ -222,8 +223,6 @@ Thank you,
 The support team
 ''' )  # Tripple quotes here can be single (''' '''), or double quote (""" """). With this, we can difine a string that spans multiple lines.
 print(course)
-
-
  
 # ============================================
 #  Other Characteristics of Strings in Python
@@ -232,7 +231,7 @@ print(course)
 # Description: Here we can a square bracket "[]" to get the xter and a given index in the string. To get the first xter, we use square bracket and 0 (zero)
 # The index of the first xter is 0, second xter 1, 3r xter, 2 etc. 
 
-course = ('Python for Beginners') # Letter "P" is the first xter in the course variable
+course = ('Python for Beginners.') # Letter "P" is the first xter in the course variable
 print(course[0])
 
 # Output: P 
@@ -240,8 +239,63 @@ print(course[0])
 # NB: We can also use a negative index here, and this is one of the features that we don't have in other programming languages as far as we know. But with ...
 # ... negative index, we will get letter "s".Assuming 0"" is the index of the first xter "P", in the variable, then "-1" will be the index of the last xter, "s".
 
-course = ('Python for Beginners') # Letter "P" is the first xter in the course variable
-print(course[-1]) # If we pass -1 instead of 0, we will get "s"
+course = ('Python for Beginners.') # Letter "P" is the first xter in the course variable
+print(course[-1]) # If we pass -1 instead of 0, we will get "s".
+
+# Output: s
+
+# You can try indices such as 2, 3, -2, -3 etc, and see what the ouput is gonna be.
+
+# Can also use the square bracket "[]" syntax to extract a few xter instead of just one xter. For example
+
+course = ('Python for Beginners.')
+print(course[0:3]) # Here Python interpreter will return all the xters starting from the start index (0) to end index (3), but it does not return the xter at index 3. That is from "P to t".
+
+
+# Output: Pyt
+
+# We also have default values for the "start" and "end" index. So, if you don't supply the end index, Python will return all the xters to the end of the index, 0
+# This will print all the xters in the string.
+
+course = ('Python for Beginners.')
+print(course[0:])
+
+#Output: Python for Beginners.
+
+# But if you change the first index to 1, it will  exclude the first xter in the string.
+
+course = ('Python for Beginners.')
+print(course[1:]) # letter "P" is excluded (rmoved) from the output. This means the default value for the start index is 1.
+
+# Output: ython for Beginners.
+
+# Now, if we do not supply the start index add an end index, say 5, Python will assume zero as the start index. With this syntax, we can easily copy or clone our string.
+
+course = ('Python for Beginners')
+print(course[:5]) # The end index, 5 means Python will count the first 5 xters starting from 0 . That way the xter, "n" is not included  [0(P), 1(y), 2(t), 3(h), 4(o),] These indices make up five (5) xters. [0, 1, 2, 3, 4, 5] This makes up 6 xters
+
+# Output: Pytho 
+
+# What if we leave both the start and end index? In this case zero(0) will be assumed as the start index and the length (len) of the string will be assumed as the end index.
+# With this syntax, we can basically copy or clone our string.
+
+course = ('Python for Beginners')
+another = course[:] # This expression will all the xters in the course variable. The second variable "another" will be a copy of first variable "course"
+print(another) 
+
+# ******************
+# Proof of Concept 
+# ******************
+
+# Define a variable called "name" and set it to "Wisdom"
+name = 'Century'
+print(name[1:-1])
+
+# Output: entur
+
+
+
+# Output: Python for Biginners.
 # ===================================
 # 
 # ===================================
