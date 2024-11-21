@@ -29,7 +29,7 @@ print("*" * 10)
 
 
 # =================
-#       Variables 
+#    Variables 
 # =================
 price = 10 
 print(price)
@@ -81,7 +81,6 @@ print(is_in_school)
 
 # In python we can also store complex values like <lists>, and <objects>.
 
-
 # Proof Concept: Imagine we want to write a program for a hospital. So, we check in a patient named Wisdom Faith. He's 20 years old and is a new patient
 # Work Required
 # Define:
@@ -92,12 +91,10 @@ name = "Wisdom Faith"
 age = 20
 is_new =True
 
-
-
 # ===================================
 # How to Receive input from the user
 # ===================================
-name = input("What is your name? ")
+name = input("What is your name? ") # The space after the "?" means the cursor should be seperated from the question mark. Otherwise will be so closed.
 print("Hi " + name)
 # Description: We going to write a small program that asks the username and then will print a greeting message customized for that user.
 # So, instead of <print>, we will use <input>. Both these <input>, and <print> are functions that built into python. As a matter of fact, think of the remote control..
@@ -110,7 +107,9 @@ print("Hi " + name)
 # We can get that value and store it in a memory using a variable. So get the result and store it in variable called name.
 
 # On the second line of our code we want to print a message like "Hi Wisdom Faith!". To do this we type print("Hi ") with a space and after the quotation, we...
-#... want to dynamically print what we have in the < name variable >. That is print("Hi " + name)
+#... want to dynamically print what we have in the < name variable >. That is print("Hi " + name). W are concatinating or combining the string...
+#..another string (ie is what we have in the name variable.) SO, the <"Hi " + name> is another example of expression (it is a piece of code that produces a value). 
+
 
 
 
