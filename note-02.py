@@ -331,11 +331,48 @@ print(msg)
 course = 'Python for Beginners.'
 print(len(course)) # the len function prints the number of xter in the variable "course"
 
-# Output: Python for Beginners.
-# ===================================
-# 
-# ===================================
-# Description:
+# Output: 20 
+
+# NB: This useful when we receive input from the user. For example, You have noticed that when you fill out a form online, each input filled will often has a limit.
+# For example, you may have 50 xters for your name. Using this len function, we can enforce a limit on the number of xters in an input filled. 
+# If the user types in more xters than we allow, we can display an error. This len function <(len(course))> is another function built into Python. 
+# It is a general purpose function. So, it is not limited to counting the number of xters in a str. When we use this function to count the number of item in the list.
+
+# -------------------------------
+#  Functions Specific To Strings
+# -------------------------------
+#--------Converting a str into uppercase:
+
+# Description: These are functions that can convert xters in a str into Uppercase or Lowercase xtersc. To access these functions, we use the "dot operator"
+# In More accurate term we refere to these functions as methods. This is a term in object granted programming. When a function blongs to something else or is specific to ...
+# ...some kind of object, we refere to that function as a method. Example that ends with "dotupper" <.upper> converts a string to uppercase as well as a function that ends
+# with "dotlowerr" <.lower> converts a string to lowercase. In contrast print and len < print(len()) >, are general purpose functions cos they don't belong to str or numbers or a particular oject.
+
+course = 'Python for Beginners.'
+print(len(course))
+print((course.upper)) # This will display all the xters in variable in uppercase.
+
+# Output: PYTHON FOR BEGINNERS.
+
+# This method does not change or modify the original str. It creates a new str and returns it.
+
+#----------Convertin a str into lowercase
+# Description: Here, we change the < dotupper > to < dotlower >
+course = 'Python for Beginners.'
+print(course)  
+print((course.lower)) # This will display all the xters in variable in lowercase.
+
+# Output: python for beginners.
+
+# Try this and see the output!!!!!!!!
+course = 'Python for Beginners.'
+print(len(course))
+print((course.lower))
+print(course)
+print((course.upper))
+# Output: "20", "python for beginners.", "Python for Beginners.", "PYTHON FOR BEGINNERS." in this order.
+
+end: 44:04
 
 # ===================================
 # 
