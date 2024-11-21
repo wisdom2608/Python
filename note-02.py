@@ -155,18 +155,79 @@ print(age)
 # We can convert str to boolean function, boolen(), to int function, int(), and to float function, float(). Let's fix the problem above
 
 birth_year = input("Birth year: ")
-age = 2019 - int(birth_year) # Here, we've passed the str into int function.
+age = 2019 - int(birth_year) # Here, we've passed the str into int function so that python interpreter will be able to evaluate the expression.
 print(age)
 
+# Python also has a useful function for getting the type of variables. For instance let's print the type of birth year as shown below
 
+birth_year = input("Birth year: ")
+print(type(birth_year)) # <type> in this case is a build-in function because it's passed in another function <print>
+age = 2019 - int(birth_year)
+print(type(age))
+print(age) # The output here will be <class 'str'> and <class 'int'>. this means the "birth_year" variable is a str, and the "age" variable is an int.
+
+# Conclusion: This is what you need to take away. Whenever you use the input function, you always get a string. When you are expecting any numerical value,...
+# ... you should always convert that str into an int, or a float.
+
+# **************
+# Proof Concept 
+# ************* 
+
+# Write a program. Ask a user their weight (in pounds), convert it to kilogram and print on the terminal.
+
+weight_lbs = input("Weight in (lbs): ")
+weight_kg = int(weight_lbs) * 0.45
+print(weight_kg)
+
+
+# ===========================
+#  More About Python Strings
+# ===========================
+
+ # --------------
+ # Short String
+ # -------------
+
+# Description: We can use single('') or double ("") quotes to define a string.
+
+course = 'Python for Beginners.' # Our string is in single quote.
+print(course)
+
+# Output: Python for Beginners.
+
+# Imagine we want to print something like this <Python's Course for Beginners>. Here, We must use double quotes in our string.
+
+course = ("Python's Course for Beginners.")
+print(course)
+
+# Output: Python's Course for Beginners.
+
+# We can also use double quote within single quote in a string
+
+course = 'Python for "Beginners".' # Our single-quote string contains double quotes within.
+print(course)
+
+# Return: Python's Course for "Beginners".
+
+# ------------------------------------
+# Define a string with multiple lines or a message that you can send in an email. In this case, we use tripple quotes
+# ------------------------------------
+course = ('''
+Hi Wisdom,
+
+Here is our first email to you.
+
+Thank you,
+The support team
+''' )  # Tripple quotes here can be single (''' '''), or double quote (""" """). With this, we van difine a sring that spans multiple lines
+print(course)
+
+
+ 
 # ===================================
 # 
 # ===================================
-# Description:
 
-# ===================================
-# 
-# ===================================
 # Description:
 
 # ===================================
