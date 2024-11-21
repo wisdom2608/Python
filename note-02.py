@@ -86,9 +86,9 @@ print(is_in_school)
 
 # In python we can also store complex values like <lists>, and <objects>.
 
-# **************
-# Proof Concept 
-# ************* 
+# ******************
+# Proof of Concept 
+# ******************
 
 # Imagine we want to write a program for a hospital. So, we check in a patient named Wisdom Faith. He's 20 years old and is a new patient
 
@@ -128,9 +128,10 @@ print("Hi " + name)
 # The output of the piece of code above --
 #    < What is your name? > and if put my name, say "Wisdom Faith", it will print "Hi Wisdom Faith" 
 
-# **************
-# Proof Concept 
-# ************* 
+# ******************
+# Proof of Concept 
+# ******************
+
 # Ask two quesions: person's name and the favourite colour.
 # The print a message like "Wisdom likes pink"
 
@@ -169,9 +170,9 @@ print(age) # The output here will be <class 'str'> and <class 'int'>. this means
 # Conclusion: This is what you need to take away. Whenever you use the input function, you always get a string. When you are expecting any numerical value,...
 # ... you should always convert that str into an int, or a float.
 
-# **************
-# Proof Concept 
-# ************* 
+# ******************
+# Proof of Concept 
+# ******************
 
 # Write a program. Ask a user their weight (in pounds), convert it to kilogram and print on the terminal.
 
@@ -219,17 +220,28 @@ Here is our first email to you.
 
 Thank you,
 The support team
-''' )  # Tripple quotes here can be single (''' '''), or double quote (""" """). With this, we van difine a sring that spans multiple lines
+''' )  # Tripple quotes here can be single (''' '''), or double quote (""" """). With this, we can difine a string that spans multiple lines.
 print(course)
 
 
  
-# ===================================
-# 
-# ===================================
+# ============================================
+#  Other Characteristics of Strings in Python
+# ============================================
 
-# Description:
+# Description: Here we can a square bracket "[]" to get the xter and a given index in the string. To get the first xter, we use square bracket and 0 (zero)
+# The index of the first xter is 0, second xter 1, 3r xter, 2 etc. 
 
+course = ('Python for Beginners') # Letter "P" is the first xter in the course variable
+print(course[0])
+
+# Output: P 
+
+# NB: We can also use a negative index here, and this is one of the features that we don't have in other programming languages as far as we know. But with ...
+# ... negative index, we will get letter "s".Assuming 0"" is the index of the first xter "P", in the variable, then "-1" will be the index of the last xter, "s".
+
+course = ('Python for Beginners') # Letter "P" is the first xter in the course variable
+print(course[-1]) # If we pass -1 instead of 0, we will get "s"
 # ===================================
 # 
 # ===================================
