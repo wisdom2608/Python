@@ -741,7 +741,164 @@ else:
     down_payment = 0.2 * price
 print(f"Down payment: ${down_payment}")
 
+# ====================
+#  Logical Operators
+# ====================
 
+# Description: We use logical operators in situations where we’ve multiple conditions. 
+# For example, let’s say we’re building an application for processing loans.
+#           “If an applicant has higher income AND good credit, then they’re eligible for loan”.
+#           In this example we have two conditions one is “high income“, and another is “good credit”.
+#           If both of these conditions are true, then the applicant is eligible for loan. 
+# This is where we use the logical “AND” operator. We use this operator to combine two conditions.
+
+has_high_income = True
+has_good_credit = True
+if has_high_income and has_good_credit:
+    print("Eligible for loan") # Output: Eligible for loan
+
+# But one of these conditions if False, we are not doing to see the output “Eligible for loan”
+
+has_high_income = False 
+has_good_credit = True
+if has_high_income and has_good_credit:
+    print("Eligible for loan") # Output: Eligible for loan
+
+# We also have the logical “or” and we use it in situations...
+# ...where we wanna to do certain things if at least one of the conditions is true. 
+#           “If an applicant has higher income OR good credit, 
+#              then they’re eligible for loan”.
+
+has_high_income = False 
+has_good_credit = True
+if has_high_income or has_good_credit:
+    print("Eligible for loan") # Output: Eligible for loan
+
+# If both of these conditions are false, we will not see any output.
+# We also have another logical operator called, “NOT” and this basically inverses any boolean value we give it.
+# If given a true boolean value, it will inverse it to false.  For example let’s add another rule to our question.
+
+#        “If an applicant has higher income AND good credit, then they’re
+#            Eligible for loan.
+#        If applicant has good credit AND does not have a criminal record
+#           then they are Eligible for loan”.
+
+
+has_good_credit = True
+has_criminal_record = False
+if has_good_credit and not has_criminal_record:
+    print("Eligible for loan") # Output: Eligible for loan
+
+# If the applicant has criminal record, it means he’s not eligible. So there will be no message.
+has_good_credit = True
+has_criminal_record = True
+if has_good_credit and not has_criminal_record:
+    print("Eligible for loan") # Output: Eligible for loan
+
+# ======================
+#  Comparison Operators
+# ======================
+
+# Description: We use comparison operators in situations where we wanna compare a variable with a value. For example,
+
+#              “If temperature is greater than 30
+#                 it’s a hot day
+#              otherwise if it’s less than 10
+#                it’s a cold day
+#              otherwise it's  neither hot nor cold”. 
+
+# To build these rules into our program, we need to use comparison operators.
+
+temperature = 30
+if temperature > 30:
+    print("It's a hot day")
+else:
+    print("It's not a hot day")
+
+# Output: It’s not a hot day. This is because 30 is not greater than 30. 
+
+# If we change the variable value to 35, we will see a different message. For instance,
+
+temperature = 35
+if temperature > 30:
+    print("It's a hot day")
+else:
+    print("It's not a hot day")
+
+# Output: It’s a hot day
+
+#            We have other operators such as
+#            != means not “equal to”
+#            ==  means “equa to”
+#            <= “less than or equal to”
+#            => “greater than equal to”
+#            so we can use conditions for our conditional statements Example
+
+temperature = 35
+if temperature >= 30:
+    print("It's  a hot day")
+else:
+   print("It's not a hot da")
+
+# -------------------
+# Proof of concept 
+# -------------------
+# You must have realized that when you fill a form online, sometimes the input fields have validation messages. 
+# For example, let say we have an input field for the user to put in their name. 
+
+name = "W"
+if (len(name)) <  3:
+    print("Name must be at least 3 characters")
+elif (len(name)) > 50:
+    print("Name must be a maximum of 50 characters")
+else:
+    print("Name looks good")
+
+# Output: Name must be at least 3 characters
+name = "Wounded"
+if (len(name)) <  3:
+    print("Name must be at least 3 characters")
+elif (len(name)) > 50:
+    print("Name must be a maximum of 50 characters")
+else:
+    print("Name looks good")
+
+# Output: Name looks good
+
+name = "Woundeujkkkkfdsnbhaiigibnwerhiopdmfnvbh"
+if (len(name)) <  3:
+    print("Name must be at least 3 characters")
+elif (len(name)) > 50:
+    print("Name must be a maximum of 50 characters")
+else:
+    print("Name looks good")
+
+# Output: Name must be a maximum of 50 characters
+
+# =====================
+#    Project: Weight Converter 
+# =====================
+
+# Description: We want to build a program to convert someone’s weight from pound(lbs) to kilogram (kg).
+# We want to extend the program and allow users to enter their weights either in kg or lbs and then we...
+# ...will convert it to the other units. 
+
+#        If name is less than 3 characters long
+#        name must be at least 3 characters 
+
+#        otherwise if it’s more than 50 characters long 
+#        name can be a maxim of 50 characters 
+#        otherwise 
+#        name looks good
+
+weight = int(input('Weight:  '))
+unit = input('(L)bs or (K)g:  ')
+if unit.upper() == 'L':
+    converted = weight *0.45
+    print(f"You are {converted} kilos")
+else:
+  converted  = weight / 0.45
+  print(f"You are {converted} pounds")
 
 # ===================================
 #  
