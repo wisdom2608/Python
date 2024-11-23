@@ -372,15 +372,379 @@ print(course)
 print((course.upper))
 # Output: "20", "python for beginners.", "Python for Beginners.", "PYTHON FOR BEGINNERS." in this order.
 
-end: 44:04
+# ========================================== 
+# Find a xter or a sequence of xter in a str 
+# ==========================================
+
+# Description: There are times you want to find a xter or a sequence of xter in a str. In those situations you can just define “method“.
+
+course = 'Python for Beginners.'
+print(course.find('P')) # This will return the index of the first occurrence of that xter. 
+
+# Output: 0
+
+# This because the index of the first capital letter “P” is zero. If you pass the index of “o”, we’ll get 4 as an output. If we pass “O”, we’ll get “-1” as the output because we don’t have an uppercase, O anywhere in the str.
+
+# We can also pass a sequence of xters say, “Beginners”. We will get “11” as output because the word Beginners” starts at index 11.
+
+course = 'Python for Beginners.'
+print(course.find('Beginners'))
+
+# Output: 11
+
+# ------------------------------------------------
+# A Method to replace a xter or a sequence of xter
+# ------------------------------------------------
+
+# Description: We can also have a method to replace a xter, or a sequence of xters, and that is called “replace”. 
+
+course = 'Python for Beginners.'
+print(course.replace('Beginners', 'Absolute Beginners.')) # This will replace Biginners with Absolute Biginners
+
+# Output: Python for Absolute Beginners.
+
+# This function “replace” is case sensitive. If we pass “biginners” instead of “Beginners”, this method is not gonna replace “Beginners” with “Absolute Beginners” because...
+# ...it didn’t find the word “beginners” in the str. So the output will remain the same as in the variable.
+
+course = 'Python for Beginners.'
+print(course.find('beginners', 'Absolute Beginners')) # We will still get “Python for Beginners.”
+
+# Output: Python for Beginners.
+
+# We can also replace a single xter, say “P” with “J”
+
+course = 'Python for Beginners.'
+print(course.find('P', 'J')) # This replace letter P with letter J.
+
+# Output: Jython for Beginners.
+
+# --------------------------------------------------------------------
+# How to check the existence of a xter or a sequence of xters in a str
+# ---------------------------------------------------------------------
+
+# Explain: There are times we want to check the existence of a xter or a sequence of xters in our str. 
+# In those situations, we use the “in” operator. Let’s say if we want to know this str contains the word “Python”, we can an expression as shown below
+
+course =  'Python for Beginners.'
+print('Python' in course) # We are checking to see if “Python” is in the course variable.
+
+# Output: True
+
+# We refer to this expression as a Boolean expression because it’s an expression that produces a Boolean value like a “True” or “False“.
+# If we change “Python” to “python” we will get False because we don’t have this exact sequence of xter-“python” in our str
+
+course = 'Python for Beginners.'
+print('python' in course) # We are checking to see if “python” is in the course variable.
+
+# Output: False
+
+# The difference between the “find” method and the “in” operation is that the “find” method returns the index of a xter or sequence of...
+# ...xters in a str while the “in” operator returns (produces) a Boolean value.
+
+# Summarily
+
+# - we can use a function to count the number of xters in a str. It’s a general purpose function built into Python.
+# - we also have specific functions for a str which we refer to as “methods”. These include “upper” for converting a str to uppercase, ...
+# - “lower” for converting a str to lowercase, and “tittle” method, the “find” method which returns the index of a xter or sentence of xters, ...
+# - the “replace” method for replacing xters or words in a str, and finally the “in” operator which says whether there are some xters in str or not.
+
+# ====================
+#  Aritmetic Operation
+# ====================
+# Description: In Python programming language, we have two types of numbers, int and float. 
+# Here we will be looking at arithmetic operations supported in Python language. These are the same arithmetic operations that we have  math. we can add numbers, ..
+# ... subtract, multiply, divide them, etc. For example:
+print(10 + 3) # For addition operator. Output: 13
+print(10 - 3) # For subtraction operator. Output: 7
+print(10 * 3) # For multiplication. Output: 30
+print(10 ** 3) # For exponential. This returns 10 to the power of 3. Output: 1000
+
+# There are two types of division:
+# - division with a float
+print(10 / 3) # Division operator is a single forward slage. This produces a floating point number. Output: 3.3333333
+
+# - division with int
+print(10 // 3) # Division operstor is a double forward slage. This produces an int number. Output: 3
+
+
+print(10 % 3) # Modular operator which is a percent (%) sign. This returns the remainder of the division. Output: 1
+
+# For these operators, we have an augmented assignment operator which is very useful. For example
+X = 10
+X = X + 3 # Python interpreter will add 3 to 10 and the result is 13.
+
+# ------------------------------
+# Augmented assignment operator
+# ------------------------------
+
+# Augmented assignment operator is a way to write the same code but in a short form.
+
+X = 10
+X += 3 # What we’ve on this line is the same as what have above ‘X = X + 3’
+print(X)
+
+# This is what we call the augmented assignment operator or enhanced assignment operator.
+
+# We can also subtract or multiply a number by a given value. That’s 
+
+X = 10
+X -= 3 # Here we’re subtracting 3 from X 
+print(X) # Output: 7
+
+X = 10
+X  *=  3
+print(X) # Output: 30
+
+# --------------------
+# Operator Precedence 
+# ----------------------
+
+# Description: Let’s say you define X and set it to 10 + 3 * 2. That is X = 10 + 3 * 2. 
+# What do you think will be the answer when you run the program? 
+# This is a very basic math operation that unfortunately a lot of people fail to answer.
+# The answer is 16. This is because in math we have a concept called “Operator Precedence“.  
+# Which means that the order of operations . So, the multiplication operation has the higher precedence, ...
+# ..so, it’s applied first. Which means 3*2 and the result is added to 10. 
+
+X = 10 + 3*2
+print(X) # Output: 16
+
+# =================
+#   Math functions
+# =================
+
+# Description: Here we’re going to see some build-in functions used for mathematics. 
+# To round functions, we can used the build-in round function called “round”.
+
+X = 2.9
+print(round(x)) # Output: 3
+
+# We have another useful build-in round function called “abs”, which is short form of “absolute”.
+# This is the absolute function that we have in math. 
+# We give it a value and it always returns the positive representation of that value even that value is negative.
+# For example,
+
+X = 2.9
+print(abs(-2.9)) # Output: 2.9
+
+# Technically in Python we have a handful of build-in function for performing mathematical operations. 
+# If we want to write a number that involves complex mathematical calculations, we need to import the math module. 
+# The module in Python is a separate file with some reusable codes. 
+# We use these modules to organize our codes into different files.
+# As a matter of fact, think of a supermarket.
+# When you go to a supermarket, you see different sections for fruits and vegetables, cleaning products, junk food, etc.
+# Each section in the supermarket is like a module in Python.
+# In Python we have this math module which contains a bunch of reusable functions for performing mathematical calculations. Example:
+
+# “import math” math is an object like a str. We can access it functions or more accurately its methods using a “dot” operator.
+
+import math
+print(math.ceil(2.9)) # Return: 3
+
+# ceil gets the ceiling of a number.
+
+import math
+print(math.floor(2.9)) # Return: 2
+
+# To learn more about these functions or methods,search for “Python 3 math module” in google or click on the link
+# ( https://docs.python.org/3/library/math.html)
+
+
+# ==============
+# If Statements
+# =============
+
+# Description: If statements are extremely important in programming as there allow us to build programs that can make decisions based on some conditions. So, if some conditions is true, we are going to do certain things otherwise we are going to do other things. Let’s consider this text file with a bunch of rules for a program:
+
+#            “ If it’s hot
+#                It’s a hot day
+#                Drink plenty of water
+
+#            otherwise if it’s cold drink
+#                It’s a cold day
+#                Wear warm clothes 
+#            otherwise 
+#                It’s a lovely day ”
+
+# Let’s write a program that simulates these rules. We start by defining a Boolean variable 
+is_hot = True
+if is_hot:
+    print("It's a hot day")
+print('Enjoy your day')
+
+# Output: It's a hot day
+#         Enjoy your day
+
+# But if we change the "True" boolean value to "False", the out is as such:
+is_hot = False
+if is_hot:
+    print("It's a hot day")
+print('Enjoy your day')
+
+# Output: Enjoy your day
+
+# Let's add anothe "print" statement indented with the "if" condition, say "print('Drink plenty of water')"
+# Because the second print statement is indented, it will be printed if the condition is true. example,
+
+is_hot = True
+if is_hot:
+    print("It's a hot day")
+    print('Drink plenty of water')
+print('Enjoy your day') 
+
+# Output: It's a hot day
+#         Drink plenty of water
+#         Enjoy your day  
+     
+ # It will print the first two messages, otherwise the condition is False. But if we want a differnt statement even when the condition is false,..
+ # ... we use the "else" statement. Example, let's maintain the condition to be true.
+
+is_hot = True
+if is_hot:
+    print("It's a hot day")
+    print('Drink plenty of water')
+else:
+    print("It's a cold day")
+    print('Wear warm clothes')    
+print('Enjoy your day')  
+
+# Output: It's a hot day
+#         Drink plenty of water
+#         Enjoy your day
+
+# Now let's change the condition to False, we have the output as shown below.
+
+is_hot = False
+if is_hot:
+    print("It's a hot day")
+    print('Drink plenty of water')
+else:
+    print("It's a cold day")
+    print('Wear warm clothes')    
+print('Enjoy your day')  
+
+# Output: It's a cold day
+#         Wear warm clothes
+#         Enjoy your day
+
+# NB: But if it's not hot, it doesn't necessarily mean that it's cold. Maybe it's a lovely day. The abcence of heat doesn't mean it's cold.
+# This means we should add another variable. Here, we use use an "elif" statement to define the second condition.
+
+# Output when all variable are set to True.
+is_hot = True
+is_cold = True
+if is_hot:
+    print("It's a hot day")
+    print('Drink plenty of water')
+    
+elif is_cold:
+    print("It's a cold day")
+    print('Wear warm clothes')  
+else:
+    print("It's a lovely day")  
+print("Enjoy your day")
+
+#  It's a hot day
+#  Drink plenty of water
+#  Enjoy your day
+
+# Output when the "is_hot" variable is set to True a "is_cold" variable is set to False.
+is_hot = True
+is_cold = False
+if is_hot:
+    print("It's a hot day")
+    print('Drink plenty of water')
+    
+elif is_cold:
+    print("It's a cold day")
+    print('Wear warm clothes')  
+else:
+    print("It's a lovely day")  
+print("Enjoy your day")
+
+#  It's a hot day
+#  Drink plenty of water
+#  Enjoy your day
+
+# Output when the "is_hot" variable is set to False a "is_cold" variable is set to True.
+is_hot = False
+is_cold = True
+if is_hot:
+    print("It's a hot day")
+    print('Drink plenty of water')
+    
+elif is_cold:
+    print("It's a cold day")
+    print('Wear warm clothes')  
+else:
+    print("It's a lovely day")  
+print("Enjoy your day")
+
+#  It's a cold day
+#  Wear warm clothe
+#  Enjoy your day
+
+# Output when the "is_hot" variable is set to False a "is_cold" variable is set to True.
+is_hot = False
+is_cold = True
+if is_hot:
+    print("It's a hot day")
+    print('Drink plenty of water')
+    
+elif is_cold:
+    print("It's a cold day")
+    print('Wear warm clothes')  
+else:
+    print("It's a lovely day")  
+print("Enjoy your day")
+
+#  It's a cold day
+#  Wear warm clothes
+#  Enjoy your day
+
+# Output when all variable are set to False.
+is_hot = False
+is_cold = False
+if is_hot:
+    print("It's a hot day")
+    print('Drink plenty of water')
+    
+elif is_cold:
+    print("It's a cold day")
+    print('Wear warm clothes')  
+else:
+    print("It's a lovely day")  
+print("Enjoy your day")
+
+#  It's a lovely day
+#  Enjoy your day
+
+# It's neith hot or cold, so it's going to be a lovely day.
+
+# ------------------
+# Proof of concept:
+# ------------------
+#          Imagin the price of a house is $1M. 
+#          If a buyer has good credit,
+#          they need to put down 10% of the price of this property
+#          otherwise 
+#          they need to put down 20%
+# WR: Write your program with these rules and display the down payment required for a buyer with good credit
+
+price = 1000000
+has_good_credit = True
+
+if has_good_credit:
+    down_payment = 0.1 * price
+
+else:
+    down_payment = 0.2 * price
+print(f"Down payment: ${down_payment}")
+
+
 
 # ===================================
-# 
-# ===================================
-# Description:
-
-# ===================================
-#  Ask the year you are born 
+#  
 # ===================================
 # Description:
 
