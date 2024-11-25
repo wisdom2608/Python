@@ -875,9 +875,9 @@ else:
 
 # Output: Name must be a maximum of 50 characters
 
-# =====================
+# =============================
 #    Project: Weight Converter 
-# =====================
+# ============================
 
 # Description: We want to build a program to convert someone’s weight from pound(lbs) to kilogram (kg).
 # We want to extend the program and allow users to enter their weights either in kg or lbs and then we...
@@ -900,15 +900,37 @@ else:
   converted  = weight / 0.45
   print(f"You are {converted} pounds")
 
-# ===================================
-#  
-# ===================================
-# Description:
+# =============
+#  While Loops
+# =============
 
-# ===================================
-# 
-# ===================================
-# Description:
+# Description: Here we are going to learn how to use "while loops" in python.
+# We use while loops to execute a block of code multiple times.
+# There are often useful in building interactive program and games. We shall learn how to build a simple game using a while loop 
+
+i = 1
+while i <= 5:
+    print(i)
+    i = i + 1
+print('Done')
+
+# We can make this program more interestin. With the expreesion below, we can repeat the str. 
+# When we multiply a str with a number, that str will be repeated.
+
+i = 1
+while i <= 5:
+    print( '*' * i ) 
+    i = i + 1
+print('Done') # The output is a little triangula shape.
+
+
+# ==============
+#  Guessing Game
+# ==============
+# Description: Here we'll learn how to use a "while loop" to build a guessing gameSo, we have a secrete number which is set to 9. 
+# Now the computer is asking to make a guess. We've have only three chances to guess the correct number. 
+# If we guess the number wrongly for three times the output will be "Sorry you filed!".
+# If we guess the number correctly, the output is "You win!"
 
 # ===================================
 # 
