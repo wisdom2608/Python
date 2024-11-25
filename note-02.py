@@ -930,8 +930,17 @@ print('Done') # The output is a little triangula shape.
 # Description: Here we'll learn how to use a "while loop" to build a guessing gameSo, we have a secrete number which is set to 9. 
 # Now the computer is asking to make a guess. We've have only three chances to guess the correct number. 
 # If we guess the number wrongly for three times the output will be "Sorry you filed!".
-# If we guess the number correctly, the output is "You win!"
+# If we guess the number correctly, the output is "You won!"
 
+secret_number = 9
+guess_count = 0
+guess_limit = 3
+while guess_count < guess_limit:
+    guess = int(input('Guess: ') )
+    guess_count += 1
+    if guess == secret_number:
+     print('You won!')
+    
 # ===================================
 # 
 # ===================================
