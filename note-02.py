@@ -77,13 +77,21 @@ print(name)
 print(is_published)
 print(is_in_school)
 
+# Output:
+#           Wisdom
+#           True
+#           False 
+
 # Description: We can also define a variable and set it to a string. For instance name ="Wisdom"
-# A boolean can be <True>, or <False> but not like "Yes" and "No" in English Language. We use underscore(_) to separate
+# A boolean can be <True>, or <False> but not like "Yes" and "No" in English Language. We use underscore(_) to separate...
 #..multiple words in a variable's name. For instance "is_published". The False and True are called boolean values.
 
-# NB: Python is case-sensitive language which is sensitive to lowercase and uppercase letters. So, we use lowercase letters when defining variables.
-# But the boolean True, and False are special key words in python language. So, Python will not understand it when spell "true" istead of "True", or "false" instead of "False"
-# Summary: This exercise we are storing simple values in a computer's memory. Simple values can be numers (such as integers, floats), string, and booleans.
+# NB: Python is case-sensitive language which is sensitive to lowercase and uppercase letters.
+# So, we use lowercase letters when defining variables.
+# But the boolean True, and False are special key words in python language. 
+# So, Python will not understand it when spelled "true" instead of "True", or "false" instead of "False"
+# Summary: This exercise we are storing simple values in a computer's memory. 
+# Simple values can be numbers (such as integers, floats), string, and booleans.
 
 # In python we can also store complex values like <lists>, and <objects>.
 
@@ -91,11 +99,13 @@ print(is_in_school)
 # Proof of Concept 
 # ******************
 
-# Imagine we want to write a program for a hospital. So, we check in a patient named Wisdom Faith. He's 20 years old and is a new patient
+#                    " Imagine we want to write a program for a hospital.
+#                       So, we check in a patient named Wisdom Faith.
+#                        He's 20 years old and is a new patient "
 
-# Work Required
+# Work Required:
 # Define:
-# - three variables for his name, his age and another variable to tell if it's a new and existing patient.
+# - three variables for his name, his age and another variable to tell if it's a new or an existing patient.
 
 #          Solution
 name = "Wisdom Faith"
@@ -107,19 +117,23 @@ is_new =True
 # ===================================
 
 name = input("What is your name? ") # The space after the "?" means the cursor should be seperated from the question mark. Otherwise will be so closed. 
-print("Hi " + name)            
+print("Hi " + name, '!')            
 
 
 # NB:Without the space, the output is < What is your name?|> but with the space, the output is < What is your name? |>
 
 # Description: We going to write a small program that asks the username and then will print a greeting message customized for that user.
-# So, instead of <print>, we will use <input>. Both these <input>, and <print> are functions that built into python. As a matter of fact, think of the remote control..
-#...of your TV. On this device, we have a bunch of bottons. These bottons are function built into your TV. You can turn it on, turn it of, change channel, reduce the volume, etc.
-# In python we also have a bunch of functions for common task such printing message, receiving inputs, and so on. We are going to use the <input> function and whenever we have..
+# So, instead of <print>, we will use <input>. Both these <input>, and <print> are functions that are built into python.
+# As a matter of fact, think of the remote control of your TV. On this device, we have a bunch of bottons. 
+# These bottons are function built into your TV. You can turn it on, turn it of, change channel, reduce the volume, etc.
+# In python we also have a bunch of functions for common task such printing message, receiving inputs, and so on. 
+# We are going to use the <input> function and whenever we have..
 # ...parenthesis, it's like recalling what executes that function. It's like princing a botton on a remote control. 
-# Let's call an <input> and in between parenthesis we are going add a string, enabling it to print something on the terminal. ie input("What is your name? ").
+# Let's call an <input> and in between parenthesis we are going add a string, enabling it to print something on the terminal. 
+# ie input("What is your name? ").
 # This contains a question mark (?), followed by a space. That is, input("What is your name? ")
-# Ths <input> function will print the message < What is your name? > on the terminal and will wait for the user to enter a value. Whatever the user enters, the <input> function will return.
+# Ths <input> function will print the message < What is your name? > on the terminal and will wait for the user to enter a value. 
+# Whatever the user enters, the <input> function will return.
 # We can get that value and store it in a memory using a variable. So get the result and store it in variable called name.
 
 # On the second line of our code we want to print a message like "Hi Wisdom Faith!". To do this we type print("Hi ") with a space and after the quotation, we...
@@ -929,7 +943,7 @@ print('Done') # The output is a little triangula shape.
 # ==============
 # Description: Here we'll learn how to use a "while loop" to build a guessing gameSo, we have a secrete number which is set to 9. 
 # Now the computer is asking to make a guess. We've have only three chances to guess the correct number. 
-# If we guess the number wrongly for three times the output will be "Sorry you filed!".
+# If we guess the number wrongly for three times the output will be "Sorry you failed!".
 # If we guess the number correctly, the output is "You won!"
 
 secret_number = 9
@@ -940,11 +954,44 @@ while guess_count < guess_limit:
     guess_count += 1
     if guess == secret_number:
      print('You won!')
-    
-# ===================================
-# 
-# ===================================
-# Description:
+# NB: When we choose the right secret number, it is still going to ask us to keep guessing.
+# This will continue till we finish the guess limit.
+# # That is, a while loop is going to be executed three times. 
+
+
+# We need to change our program such that if the if the user makes the right guess, we need to terminate a while loop. 
+#  We need to jump out of it.  
+# We can use the "bresk state" to terminate the loop. When Python enterpreter prints the statement "You won!",...
+# ...it's not going to evaluate the guess limit again.
+# This is program as shown below.
+secret_number = 9
+guess_count = 0
+guess_limit = 3
+while guess_count < guess_limit:
+    guess = int(input('Guess: ') )
+    guess_count += 1
+    if guess == secret_number:
+     print('You won!')
+     break
+# The last thing we need to add here is the message that tell that they user that they failed if they did not guess the right number.
+# Here, we add an "else" statement for the "while loop"
+
+secret_number = 9
+guess_count = 0
+guess_limit = 3
+while guess_count < guess_limit:
+    guess = int(input('Guess: ') )
+    guess_count += 1
+    if guess == secret_number:
+     print('You won!')
+     break
+else:
+    print("Sorry you failed!")
+
+# ===========
+#   Car Game
+# ===========
+# Description: This game is simulation for a car game. The game doesn't have the graphical user interface or GUI. And it doesn't really matter for now. Our focus is entirely on building the egine for this game.
 
 # ===================================
 # 
