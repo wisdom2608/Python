@@ -979,7 +979,74 @@ else:
 # ===========
 # Description: This game is simulation for a car game. 
 # The game doesn't have the graphical user interface or GUI. And it doesn't really matter for now. 
-# Our focus is entirely on building the egine for this game. 
+# Our focus is entirely on building the egine for this game. We will get the little symbol “>”, and our program is waiting for us to enter a cmd. If we type “help” or “HELP”. So it doesn’t matter if it’s lowercase or uppercase. We’ll get a list of cmd that our game  supports. When we type “help”, we ‘ll have:
+#    “
+#    start - to start the car
+#    stop - to stop the car
+#    quit - to exit  or terminate the game“
+
+# Any other cmd that we type our program is gonna tell us that “hey!, I don’t understand that”
+# For example, if we type asd, it says “i don’t understand that”
+#    If we type “star” we will get the message “car started…Ready to go”
+#    If we type “stop”, it says “Car stop”
+#    Finally if we type “quit “, our program terminates.
+
+command = ""
+while command.lower() != "quit": 
+    command = input('>')
+    if command.lower() == 'start':
+        print('Car started…Ready to go')
+    elif command.lower() == 'start':
+        print('Cart stop')
+
+# But in our code, we’ve repeated “lower” multiple times and which is not good. In programming, we have a term called “DRY”, which means “Don’t Repeat Yourself“. So, whenever you’ve duplicated your code, that means you’re doing something wrong.
+# How to solve this problem: instead of calling the lower method in each condition, we can call it in line 2 and line 3 of the code. as shown below:
+
+command = ""
+while command != "quit":
+    command = input('>').lower()
+    if command == 'start':
+        print('Car started…Ready to go')
+    elif command == 'stop':
+        print('Car stop.')
+    elif command == 'help':
+        print("""
+start - to star the car
+stop - to stop the car
+quit- to exit              
+              """)
+ 
+    else:
+        print(" orry, I don't understand that")
+
+# When we type “quit”, we still the message “Sorry, I don’t understand”. This is Normally not supposed to happen. To fix this, we use while loop and True at the same time and add another elif before the else block and break it as shown below.
+
+
+
+command = ""
+while True:
+    command = input('>').lower()
+    if command == 'start':
+        print('Car started…Ready to go')
+    elif command == 'stop':
+        print('Car stop.')
+    elif command == 'help':
+        print("""
+start - to star the car
+stop - to stop the car
+quit- to exit
+""")
+           
+    elif command == 'quit':
+        break
+    else:
+        print(" Sorry, I don't understand that")
+
+# "while True" the code is going to be repeated until it explicitly break out of it. 
+# Now if we type “quit”, our program will terminate. 
+
+# End:
+# 1:38:58
 
 # ===================================
 # 
