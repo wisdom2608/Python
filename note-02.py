@@ -1006,7 +1006,7 @@ command = ""
 while command != "quit":
     command = input('>').lower()
     if command == 'start':
-        print('Car started…Ready to go')
+        print('Car started… Ready to go')
     elif command == 'stop':
         print('Car stop.')
     elif command == 'help':
@@ -1017,7 +1017,7 @@ quit- to exit
               """)
  
     else:
-        print(" orry, I don't understand that")
+        print("Sorry, I don't understand that")
 
 # When we type “quit”, we still the message “Sorry, I don’t understand”. This is Normally not supposed to happen. To fix this, we use while loop and True at the same time and add another elif before the else block and break it as shown below.
 
@@ -1045,8 +1045,50 @@ quit- to exit
 # "while True" the code is going to be repeated until it explicitly break out of it. 
 # Now if we type “quit”, our program will terminate. 
 
-# End:
-# 1:38:58
+# NB:
+# Here's a challenge, if we type “start”, we get the message “car is started…” 
+# And if we repeat “start” again, we see the same return “car is started…”.
+# It could be better if it prints the messenger “Car is already started”. 
+# So, it doesn't make sense to start a car twice.
+# Similarly, if we type “stop”, we will get the message “Car stopped”. 
+# If we repeat “stop” again, we receive the same message. It doesn’t make sense to stop a car twice.
+# So what we want to do is that if the car is started and the user wants to start it again, ...
+# ...there will be a message like “hey the car has started what are you doing?” 
+# And similarly if the car is stopped and the user wants to stop it again, then, the program should yell at the user.
+# Let’s make the necessary changes to implement this scenario.
+# So to add this to our program, we need to know if the car is started or not. 
+# So, there’s one more piece of information that we need to store in the memory. 
+# So the kind of data we need to store here is a boolean. If the car started or not? 
+# It’s the matter of “Yes”, or “No”, True or False.
+
+command = ""
+started = False
+while True:
+    command = input('>').lower()
+    if command == 'start':
+       if started:
+           print('Car is already started')
+       else:
+           started = True 
+           print('Car started…')
+        
+    elif command == 'stop':
+        if not started:
+            print('Car is already stopped!')
+        else:
+            started = False
+            print('Car stop.')
+    elif command == 'help':
+        print("""
+start - to star the car
+stop - to stop the car
+quit- to exit
+""")
+           
+    elif command == 'quit':
+        break
+    else:
+        print(" Sorry, I don't understand that")
 
 # ===================================
 # 
