@@ -1067,17 +1067,17 @@ while True:
     command = input('>').lower()
     if command == 'start':
        if started:
-           print('Car is already started')
+           print('Car already started')
        else:
            started = True 
            print('Car started…')
         
     elif command == 'stop':
         if not started:
-            print('Car is already stopped!')
+            print('Car already stopped!')
         else:
             started = False
-            print('Car stop.')
+            print('Car stopped')
     elif command == 'help':
         print("""
 start - to star the car
@@ -1090,10 +1090,11 @@ quit- to exit
     else:
         print(" Sorry, I don't understand that")
 
-# ===================================
-# 
-# ===================================
-# Description:
+# ========
+# For Loop
+# ========
+
+# Description: In this face, we will be discussing about "For Loop".
 
 # ===================================
 # 
