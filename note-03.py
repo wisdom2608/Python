@@ -214,17 +214,123 @@ print(friends[1:]) # This will grap element at index position 1 and all other el
 friends = ["Kevin", "Karen", "Jim", "Oscar", "Toby",] # Let's add a couple of other elements so we can illustrate it better.
 print(friends[1:3]) # This will grap element at index position 1 upto not including 3. So, it will grap Karen, and Jim.
 
-# So this is how we can access elements inside this list.
+#                         So, this is how we can access elements inside this list.
+
+# NB: We can a modify items in the list as shown below.
+friends = ["Kevin", "Karen", "Jim", "Oscar", "Toby",] 
+friends[1] = "Mike" # We are changing or replacing the element ("Karen") in index postion 1 to (with) another element called "Mike".
+print(friends[1])   #  So, when we print value in index position 1, it will be updated to Mike instead of Karen.
 
 
-# ===================================
-# 
-# ===================================
-# Description:
+# ================
+#  List Functions
+# ================
+# Description: Here we will talk about using a function with lists in python. In python, a list is one of the most important structures when we
+# ... store information. A list basically allows you to take a bunch of given values, organise them, and store them inside of theor own "little list" structure.
+# So, below we've a list of lucky numbers and list of friends. These two lists are storing a bunch of different values.
+# What makes it awesom is, not only can we store only these limited values, we can store hundreds and thousands of millions of values.
+# When you are working with a lot of data and a lot of information python, this lists are invaluable. 
+# So, because this list is important, there's actually different functions that we can use with list. And these functions allow to do things like ...
+# ...modify the list, get information about the list.
+ 
+lucky_numbers = [4, 8, 15, 16, 23, 42]
+friends = ['Kevin', 'Karen', 'Jim', 'Oscar', 'Toby',] 
+print(friends) # This will print the elements in the list.
 
-# ===================================
-#  Ask the year you are born 
-# ===================================
+# There are lot of other functions that we can use. This is called the "extend" function. It allows us to take a list append another...
+# ...list on to the end of it.
+
+lucky_numbers = [4, 8, 15, 16, 23, 42]
+friends = ['Kevin', 'Karen', 'Jim', 'Oscar', 'Toby',] 
+friends.extend(lucky_numbers) # Here we pass the list we want to append to the end of "friends" list inside the extend function
+print(friends) 
+
+# We can also just individual elements on to a list.
+lucky_numbers = [4, 8, 15, 16, 23, 42]
+friends = ['Kevin', 'Karen', 'Jim', 'Oscar', 'Toby',] 
+friends.append('Creed') # This will add "Creed" as a new item to a friends list. The item added is at the end of the list
+print(friends) 
+
+# Let's say we want to add an item inside the middle of the list, there's another list function called "insert".
+
+# The insert fxn takes two parameters. The first is the indext where you want to store the value, the second is the new value.
+lucky_numbers = [4, 8, 15, 16, 23, 42]
+friends = ['Kevin', 'Karen', 'Jim', 'Oscar', 'Toby',] 
+friends.insert(1, 'Cathe') # The index position here is 1, and new element we want to insert is Cathe. All other values will be pushed to the right.
+print(friends)
+
+# Let's say we want to remove an element from the list. Here we use a list function called "remove".
+# We add the function and pass the element we want to remove without necessarily pricising its index positon. Example,
+
+lucky_numbers = [4, 8, 15, 16, 23, 42]
+friends = ['Kevin', 'Karen', 'Jim', 'Oscar', 'Toby',] 
+friends.remove('Jim')    # The will remove Jim from the list.
+print(friends)
+
+
+# Remove all the elements from the list
+lucky_numbers = [4, 8, 15, 16, 23, 42]
+friends = ['Kevin', 'Karen', 'Jim', 'Oscar', 'Toby',] 
+friends.clear()    # The will empty the list.
+print(friends)
+
+# There is also another function called "pop". "pop" function gets rid of the last element inside the lis
+lucky_numbers = [4, 8, 15, 16, 23, 42]
+friends = ['Kevin', 'Karen', 'Jim', 'Oscar', 'Toby',] 
+friends.pop()    # The last element disappeared. So, it cleared off 'Toby'
+print(friends)
+
+# Let's figure out if a certain element exists in this list. Let's say we want to check if our friend 'Kevin' is in the list.
+# Here, we use .index and pass the value(the name of the element).
+
+lucky_numbers = [4, 8, 15, 16, 23, 42]
+friends = ['Kevin', 'Karen', 'Jim', 'Oscar', 'Toby',] 
+print(friends.index('Kevin')) # This tells us the index of Kevin or tells us if Kevin is in the list.
+
+lucky_numbers = [4, 8, 15, 16, 23, 42]
+friends = ['Kevin', 'Karen', 'Jim', 'Oscar', 'Toby',] 
+print(friends.index('Jim')) # This tells us the index of Jim or tells us if Jim is in the list.
+
+# If we put a Name that is not in the list, if print an error message to us. For instance
+lucky_numbers = [4, 8, 15, 16, 23, 42]
+friends = ['Kevin', 'Karen', 'Jim', 'Oscar', 'Toby',] 
+print(friends.index('Paul')) # We'll receive an error message since the element-Paul is not in the list.
+
+# We can actually count the number of similar items in the list.
+lucky_numbers = [4, 8, 15, 16, 23, 42]
+friends = ['Kevin', 'Karen', 'Jim', 'Jim', 'Jim', 'Oscar', 'Toby',] 
+print(friends.count('Jim')) # This counts the number of times, the element-Jim shows up inside the list. It will return a 3.
+
+
+# We can also sort the values in the list.
+# This Puts items in the list in alphabetical order.
+lucky_numbers = [4, 8, 15, 16, 23, 42]
+friends = ['Kevin', 'Karen', 'Jim', 'Oscar', 'Toby',] 
+friends.sort()
+print(friends) # This will sort or arrange the list in ascending order. The ouput is ['Jim', 'Karen', 'Kevin', 'Oscar', 'Toby']
+
+# This can also work for lucky numbers
+lucky_numbers = [4, 8, 15, 16, 23, 42]
+friends = ['Kevin', 'Karen', 'Jim', 'Oscar', 'Toby',] 
+lucky_numbers.sort()
+print(lucky_numbers) # This will sort or arrange the list of "lucky_numbers" in ascending order. The ouput is [4, 8, 15, 16, 23, 42]
+
+# We can also reverse a list. This arranges numbers or in descending order(from bigger down to smaller).
+lucky_numbers = [4, 8, 15, 16, 23, 42]
+friends = ['Kevin', 'Karen', 'Jim', 'Oscar', 'Toby',] 
+lucky_numbers.reverse()
+print(lucky_numbers) # This will reverse or arrange the list of "lucky_numbers"  in descending order. The ouput is [42, 23, 16, 15, 8, 4]
+
+# There is another list function called "copy". We can actually create another list and make it as a copy. For example 
+lucky_numbers = [4, 8, 15, 16, 23, 42]
+friends = ['Kevin', 'Karen', 'Jim', 'Oscar', 'Toby',] 
+friends2 = friends.copy() # "friends2" will have all the same attributes as "friends"
+print(friends2) 
+
+
+# =======
+#  Tuples 1:18:59
+# =======
 # Description:
 
 # ===================================
