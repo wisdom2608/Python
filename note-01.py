@@ -47,7 +47,7 @@ def njilap_town():  # <def> means <definition> which python recognizes it as a f
     print(text)
     print(text)
     print(text)
-#These lines of code below calls the function above. The "schocl" typo can be corrected only on a single line.
+#These lines of code below call the function above. The "schocl" typo can be corrected only on a single line.
 njilap_town () # 1st call prints the fxn 3 times
 njilap_town () # 2nd call prints the fxn 6 times
 njilap_town () # 3rd call prints the fxn 9 times
