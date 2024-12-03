@@ -19,6 +19,27 @@ print(phrase.upper().isupper()) # This coverts the str in the phrase container v
 phrase = "John Peter"
 print(phrase.lower().islower()) # This coverts the str in the phrase container variable to lowercase, and then asks if it's in lowercase. the return is "True".
 
+phrase = "John Peter"
+print(len(phrase)) # Prints the number of letters in the str "len" means length
+
+phrase = "John Peter"
+print(phrase[0]) # Prints J
+
+phrase = "John Peter"
+print(phrase[-1]) # Prints r
+
+phrase = "John Peter"
+print(phrase[3]) # Prints n, etc.
+
+
+phrase = "John Peter"
+print(phrase.index("P")) # This prints 5
+
+phrase = "John Peter"
+print(phrase.index("J")) # This prints 0
+
+
+
 num_1 = input("Enter the first number: ")
 num_2 = input("Enter the second number: ")
 result = num_1 + num_2
